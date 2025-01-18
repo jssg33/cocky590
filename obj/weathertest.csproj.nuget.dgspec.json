@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\home\\weathertest\\weathertest.csproj": {}
+    "C:\\home\\cocky590\\weathertest.csproj": {}
   },
   "projects": {
-    "C:\\home\\weathertest\\weathertest.csproj": {
+    "C:\\home\\cocky590\\weathertest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\home\\weathertest\\weathertest.csproj",
+        "projectUniqueName": "C:\\home\\cocky590\\weathertest.csproj",
         "projectName": "weathertest",
-        "projectPath": "C:\\home\\weathertest\\weathertest.csproj",
+        "projectPath": "C:\\home\\cocky590\\weathertest.csproj",
         "packagesPath": "C:\\Users\\Administrator.CAPITOL1\\.nuget\\packages\\",
-        "outputPath": "C:\\home\\weathertest\\obj\\",
+        "outputPath": "C:\\home\\cocky590\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator.CAPITOL1\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,6 +43,46 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "EntityFrameworkCore.Jet": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "EntityFrameworkCore.Jet.Data": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "EntityFrameworkCore.Jet.Odbc": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "EntityFrameworkCore.Jet.OleDb": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
