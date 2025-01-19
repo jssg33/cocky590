@@ -1,3 +1,5 @@
+using somecontrollers.Controllers;
+using Enterprise.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
