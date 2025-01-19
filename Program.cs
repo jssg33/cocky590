@@ -17,7 +17,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
-
+app.MapEmployeeEndpoints();
+app.MapBuEndpoints();
+app.MapCertificationEndpoints();
+app.MapUserEndpoints();
 app.MapControllers();
 
 app.Run();
