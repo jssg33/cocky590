@@ -47,71 +47,6 @@
           }
         }
       },
-      "EntityFrameworkCore.Jet/8.0.0": {
-        "type": "package",
-        "dependencies": {
-          "EntityFrameworkCore.Jet.Data": "8.0.0",
-          "Microsoft.EntityFrameworkCore": "[8.0.6, 8.0.999]",
-          "Microsoft.EntityFrameworkCore.Relational": "[8.0.6, 8.0.999]"
-        },
-        "compile": {
-          "lib/net8.0/EntityFrameworkCore.Jet.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/EntityFrameworkCore.Jet.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "EntityFrameworkCore.Jet.Data/8.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/EntityFrameworkCore.Jet.Data.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/EntityFrameworkCore.Jet.Data.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "EntityFrameworkCore.Jet.Odbc/8.0.0": {
-        "type": "package",
-        "dependencies": {
-          "EntityFrameworkCore.Jet": "8.0.0",
-          "System.Data.Odbc": "8.0.0"
-        },
-        "compile": {
-          "lib/net8.0/EntityFrameworkCore.Jet.Odbc.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/EntityFrameworkCore.Jet.Odbc.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "EntityFrameworkCore.Jet.OleDb/8.0.0": {
-        "type": "package",
-        "dependencies": {
-          "EntityFrameworkCore.Jet": "8.0.0",
-          "System.Data.OleDb": "8.0.0"
-        },
-        "compile": {
-          "lib/net8.0/EntityFrameworkCore.Jet.OleDb.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/EntityFrameworkCore.Jet.OleDb.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1070,7 +1005,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.OpenApi/1.2.3": {
+      "Microsoft.OpenApi/1.6.23": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
@@ -1093,6 +1028,28 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Win32.SystemEvents/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
           }
         }
       },
@@ -1468,103 +1425,24 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.Configuration.ConfigurationManager/8.0.0": {
+      "System.Configuration.ConfigurationManager/6.0.1": {
         "type": "package",
         "dependencies": {
-          "System.Diagnostics.EventLog": "8.0.0",
-          "System.Security.Cryptography.ProtectedData": "8.0.0"
+          "System.Security.Cryptography.ProtectedData": "6.0.0",
+          "System.Security.Permissions": "6.0.0"
         },
         "compile": {
-          "lib/net8.0/System.Configuration.ConfigurationManager.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.Configuration.ConfigurationManager.dll": {
+          "lib/net6.0/System.Configuration.ConfigurationManager.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "System.Data.Odbc/8.0.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Text.Encoding.CodePages": "8.0.0"
-        },
-        "compile": {
-          "lib/net8.0/System.Data.Odbc.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/System.Data.Odbc.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/freebsd/lib/net8.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "freebsd"
-          },
-          "runtimes/illumos/lib/net8.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "illumos"
-          },
-          "runtimes/ios/lib/net8.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "ios"
-          },
-          "runtimes/linux/lib/net8.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "linux"
-          },
-          "runtimes/osx/lib/net8.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "osx"
-          },
-          "runtimes/solaris/lib/net8.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "solaris"
-          },
-          "runtimes/tvos/lib/net8.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "tvos"
-          },
-          "runtimes/win/lib/net8.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "System.Data.OleDb/8.0.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Configuration.ConfigurationManager": "8.0.0",
-          "System.Diagnostics.PerformanceCounter": "8.0.0"
-        },
-        "compile": {
-          "lib/net8.0/System.Data.OleDb.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/System.Data.OleDb.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net8.0/System.Data.OleDb.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Diagnostics.DiagnosticSource/9.0.1": {
@@ -1590,52 +1468,30 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "System.Diagnostics.EventLog/8.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/System.Diagnostics.EventLog.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/System.Diagnostics.EventLog.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          },
-          "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "System.Diagnostics.PerformanceCounter/8.0.0": {
+      "System.Drawing.Common/6.0.0": {
         "type": "package",
         "dependencies": {
-          "System.Configuration.ConfigurationManager": "8.0.0"
+          "Microsoft.Win32.SystemEvents": "6.0.0"
         },
         "compile": {
-          "lib/net8.0/System.Diagnostics.PerformanceCounter.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.Diagnostics.PerformanceCounter.dll": {
+          "lib/net6.0/System.Drawing.Common.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net6.0/_._": {}
+          "buildTransitive/netcoreapp3.1/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/net8.0/System.Diagnostics.PerformanceCounter.dll": {
+          "runtimes/unix/lib/net6.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/net6.0/System.Drawing.Common.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1797,6 +1653,28 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "System.Security.AccessControl/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Security.AccessControl.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Security.AccessControl.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Security.Cryptography.Cng/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -1819,20 +1697,46 @@
           }
         }
       },
-      "System.Security.Cryptography.ProtectedData/8.0.0": {
+      "System.Security.Cryptography.ProtectedData/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net8.0/System.Security.Cryptography.ProtectedData.dll": {
+          "lib/net6.0/System.Security.Cryptography.ProtectedData.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.Security.Cryptography.ProtectedData.dll": {
+          "lib/net6.0/System.Security.Cryptography.ProtectedData.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net6.0/_._": {}
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Security.Permissions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "6.0.0",
+          "System.Windows.Extensions": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Security.Permissions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Security.Principal.Windows/5.0.0": {
@@ -1871,23 +1775,26 @@
           }
         }
       },
-      "System.Text.Encoding.CodePages/8.0.0": {
+      "System.Text.Encoding.CodePages/6.0.0": {
         "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
         "compile": {
-          "lib/net8.0/System.Text.Encoding.CodePages.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.Text.Encoding.CodePages.dll": {
+          "lib/net6.0/System.Text.Encoding.CodePages.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net6.0/_._": {}
+          "buildTransitive/netcoreapp3.1/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll": {
+          "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1959,6 +1866,28 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "System.Windows.Extensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Windows.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Windows.Extensions.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
       }
     }
   },
@@ -1999,58 +1928,6 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
-      ]
-    },
-    "EntityFrameworkCore.Jet/8.0.0": {
-      "sha512": "cwlrTIzEMwyx+fEyvHlbuX6xvxUF94z7ig3/+kEW4XeCDu+Nqqp41lAyTbDj/I9toFtVLUZVMVKHMiPRl43xMQ==",
-      "type": "package",
-      "path": "entityframeworkcore.jet/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "entityframeworkcore.jet.8.0.0.nupkg.sha512",
-        "entityframeworkcore.jet.nuspec",
-        "lib/net8.0/EntityFrameworkCore.Jet.dll",
-        "lib/net8.0/EntityFrameworkCore.Jet.xml"
-      ]
-    },
-    "EntityFrameworkCore.Jet.Data/8.0.0": {
-      "sha512": "IFlCqeXdWLz+hj87LOt607fz035uBUp6Oz+oMlGlO8LuEay2CXR2nEvnYfDRWQMGisYtG0IlGYc5p6DTGRBHKA==",
-      "type": "package",
-      "path": "entityframeworkcore.jet.data/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "entityframeworkcore.jet.data.8.0.0.nupkg.sha512",
-        "entityframeworkcore.jet.data.nuspec",
-        "lib/net8.0/EntityFrameworkCore.Jet.Data.dll",
-        "lib/net8.0/EntityFrameworkCore.Jet.Data.xml"
-      ]
-    },
-    "EntityFrameworkCore.Jet.Odbc/8.0.0": {
-      "sha512": "xENjvPZEi907Hfze/M+cxtnvI/vKmjKixzD2HDTnPGzxnqsb+0Nww9dhnQ59GlGo5dW9SVnDyl5T0nRJK96kdg==",
-      "type": "package",
-      "path": "entityframeworkcore.jet.odbc/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "entityframeworkcore.jet.odbc.8.0.0.nupkg.sha512",
-        "entityframeworkcore.jet.odbc.nuspec",
-        "lib/net8.0/EntityFrameworkCore.Jet.Odbc.dll",
-        "lib/net8.0/EntityFrameworkCore.Jet.Odbc.xml"
-      ]
-    },
-    "EntityFrameworkCore.Jet.OleDb/8.0.0": {
-      "sha512": "nGOCmP0dNj7rAQNi3povQf44lqFP3Y1cP++nnDJQhAMFp5fAciF3xW3n28A5yhxLIHrzOD18uzVxpXpYvyQ+KQ==",
-      "type": "package",
-      "path": "entityframeworkcore.jet.oledb/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "entityframeworkcore.jet.oledb.8.0.0.nupkg.sha512",
-        "entityframeworkcore.jet.oledb.nuspec",
-        "lib/net8.0/EntityFrameworkCore.Jet.OleDb.dll",
-        "lib/net8.0/EntityFrameworkCore.Jet.OleDb.xml"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -4144,20 +4021,18 @@
         "runtime.json"
       ]
     },
-    "Microsoft.OpenApi/1.2.3": {
-      "sha512": "Nug3rO+7Kl5/SBAadzSMAVgqDlfGjJZ0GenQrLywJ84XGKO0uRqkunz5Wyl0SDwcR71bAATXvSdbdzPrYRYKGw==",
+    "Microsoft.OpenApi/1.6.23": {
+      "sha512": "tZ1I0KXnn98CWuV8cpI247A17jaY+ILS9vvF7yhI0uPPEqF4P1d7BWL5Uwtel10w9NucllHB3nTkfYTAcHAh8g==",
       "type": "package",
-      "path": "microsoft.openapi/1.2.3",
+      "path": "microsoft.openapi/1.6.23",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net46/Microsoft.OpenApi.dll",
-        "lib/net46/Microsoft.OpenApi.pdb",
-        "lib/net46/Microsoft.OpenApi.xml",
+        "README.md",
         "lib/netstandard2.0/Microsoft.OpenApi.dll",
         "lib/netstandard2.0/Microsoft.OpenApi.pdb",
         "lib/netstandard2.0/Microsoft.OpenApi.xml",
-        "microsoft.openapi.1.2.3.nupkg.sha512",
+        "microsoft.openapi.1.6.23.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
     },
@@ -4177,6 +4052,35 @@
         "lib/netstandard2.0/Microsoft.SqlServer.Server.xml",
         "microsoft.sqlserver.server.1.0.0.nupkg.sha512",
         "microsoft.sqlserver.server.nuspec"
+      ]
+    },
+    "Microsoft.Win32.SystemEvents/6.0.0": {
+      "sha512": "hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/Microsoft.Win32.SystemEvents.dll",
+        "lib/net461/Microsoft.Win32.SystemEvents.xml",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll",
+        "lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
       ]
     },
     "Mono.TextTemplating/3.0.0": {
@@ -4595,139 +4499,28 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Configuration.ConfigurationManager/8.0.0": {
-      "sha512": "JlYi9XVvIREURRUlGMr1F6vOFLk7YSY4p1vHo4kX3tQ0AGrjqlRWHDi66ImHhy6qwXBG3BJ6Y1QlYQ+Qz6Xgww==",
+    "System.Configuration.ConfigurationManager/6.0.1": {
+      "sha512": "jXw9MlUu/kRfEU0WyTptAVueupqIeE3/rl0EZDMlf8pcvJnitQ8HeVEp69rZdaStXwTV72boi/Bhw8lOeO+U2w==",
       "type": "package",
-      "path": "system.configuration.configurationmanager/8.0.0",
+      "path": "system.configuration.configurationmanager/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
-        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Configuration.ConfigurationManager.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
         "buildTransitive/netcoreapp2.0/System.Configuration.ConfigurationManager.targets",
-        "lib/net462/System.Configuration.ConfigurationManager.dll",
-        "lib/net462/System.Configuration.ConfigurationManager.xml",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Configuration.ConfigurationManager.dll",
+        "lib/net461/System.Configuration.ConfigurationManager.xml",
         "lib/net6.0/System.Configuration.ConfigurationManager.dll",
         "lib/net6.0/System.Configuration.ConfigurationManager.xml",
-        "lib/net7.0/System.Configuration.ConfigurationManager.dll",
-        "lib/net7.0/System.Configuration.ConfigurationManager.xml",
-        "lib/net8.0/System.Configuration.ConfigurationManager.dll",
-        "lib/net8.0/System.Configuration.ConfigurationManager.xml",
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.xml",
-        "system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+        "runtimes/win/lib/net461/System.Configuration.ConfigurationManager.dll",
+        "runtimes/win/lib/net461/System.Configuration.ConfigurationManager.xml",
+        "system.configuration.configurationmanager.6.0.1.nupkg.sha512",
         "system.configuration.configurationmanager.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.Data.Odbc/8.0.0": {
-      "sha512": "c+GfnZt2/HyU+voKw2fctLZClcNjPZPWS+mnIhGvDknRMqL/fwWlREWPgA4csbp9ZkQIgB4qkufgdh/oh5Ubow==",
-      "type": "package",
-      "path": "system.data.odbc/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Data.Odbc.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Data.Odbc.targets",
-        "lib/net462/System.Data.Odbc.dll",
-        "lib/net462/System.Data.Odbc.xml",
-        "lib/net6.0/System.Data.Odbc.dll",
-        "lib/net6.0/System.Data.Odbc.xml",
-        "lib/net7.0/System.Data.Odbc.dll",
-        "lib/net7.0/System.Data.Odbc.xml",
-        "lib/net8.0/System.Data.Odbc.dll",
-        "lib/net8.0/System.Data.Odbc.xml",
-        "lib/netstandard2.0/System.Data.Odbc.dll",
-        "lib/netstandard2.0/System.Data.Odbc.xml",
-        "runtimes/freebsd/lib/net6.0/System.Data.Odbc.dll",
-        "runtimes/freebsd/lib/net6.0/System.Data.Odbc.xml",
-        "runtimes/freebsd/lib/net7.0/System.Data.Odbc.dll",
-        "runtimes/freebsd/lib/net7.0/System.Data.Odbc.xml",
-        "runtimes/freebsd/lib/net8.0/System.Data.Odbc.dll",
-        "runtimes/freebsd/lib/net8.0/System.Data.Odbc.xml",
-        "runtimes/illumos/lib/net7.0/System.Data.Odbc.dll",
-        "runtimes/illumos/lib/net7.0/System.Data.Odbc.xml",
-        "runtimes/illumos/lib/net8.0/System.Data.Odbc.dll",
-        "runtimes/illumos/lib/net8.0/System.Data.Odbc.xml",
-        "runtimes/ios/lib/net7.0/System.Data.Odbc.dll",
-        "runtimes/ios/lib/net7.0/System.Data.Odbc.xml",
-        "runtimes/ios/lib/net8.0/System.Data.Odbc.dll",
-        "runtimes/ios/lib/net8.0/System.Data.Odbc.xml",
-        "runtimes/linux/lib/net6.0/System.Data.Odbc.dll",
-        "runtimes/linux/lib/net6.0/System.Data.Odbc.xml",
-        "runtimes/linux/lib/net7.0/System.Data.Odbc.dll",
-        "runtimes/linux/lib/net7.0/System.Data.Odbc.xml",
-        "runtimes/linux/lib/net8.0/System.Data.Odbc.dll",
-        "runtimes/linux/lib/net8.0/System.Data.Odbc.xml",
-        "runtimes/osx/lib/net6.0/System.Data.Odbc.dll",
-        "runtimes/osx/lib/net6.0/System.Data.Odbc.xml",
-        "runtimes/osx/lib/net7.0/System.Data.Odbc.dll",
-        "runtimes/osx/lib/net7.0/System.Data.Odbc.xml",
-        "runtimes/osx/lib/net8.0/System.Data.Odbc.dll",
-        "runtimes/osx/lib/net8.0/System.Data.Odbc.xml",
-        "runtimes/solaris/lib/net7.0/System.Data.Odbc.dll",
-        "runtimes/solaris/lib/net7.0/System.Data.Odbc.xml",
-        "runtimes/solaris/lib/net8.0/System.Data.Odbc.dll",
-        "runtimes/solaris/lib/net8.0/System.Data.Odbc.xml",
-        "runtimes/tvos/lib/net7.0/System.Data.Odbc.dll",
-        "runtimes/tvos/lib/net7.0/System.Data.Odbc.xml",
-        "runtimes/tvos/lib/net8.0/System.Data.Odbc.dll",
-        "runtimes/tvos/lib/net8.0/System.Data.Odbc.xml",
-        "runtimes/win/lib/net6.0/System.Data.Odbc.dll",
-        "runtimes/win/lib/net6.0/System.Data.Odbc.xml",
-        "runtimes/win/lib/net7.0/System.Data.Odbc.dll",
-        "runtimes/win/lib/net7.0/System.Data.Odbc.xml",
-        "runtimes/win/lib/net8.0/System.Data.Odbc.dll",
-        "runtimes/win/lib/net8.0/System.Data.Odbc.xml",
-        "system.data.odbc.8.0.0.nupkg.sha512",
-        "system.data.odbc.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.Data.OleDb/8.0.0": {
-      "sha512": "FpUTcQ0E8mFvcYp8UZA3NX8wgmhmsCue56g1zfkr1xdOnT5FrYYmC5DWQ9xCw8o8zuxVBKLZvliqEGgmeoalaQ==",
-      "type": "package",
-      "path": "system.data.oledb/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Data.OleDb.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Data.OleDb.targets",
-        "lib/net462/System.Data.OleDb.dll",
-        "lib/net462/System.Data.OleDb.xml",
-        "lib/net6.0/System.Data.OleDb.dll",
-        "lib/net6.0/System.Data.OleDb.xml",
-        "lib/net7.0/System.Data.OleDb.dll",
-        "lib/net7.0/System.Data.OleDb.xml",
-        "lib/net8.0/System.Data.OleDb.dll",
-        "lib/net8.0/System.Data.OleDb.xml",
-        "lib/netstandard2.0/System.Data.OleDb.dll",
-        "lib/netstandard2.0/System.Data.OleDb.xml",
-        "runtimes/win/lib/net6.0/System.Data.OleDb.dll",
-        "runtimes/win/lib/net6.0/System.Data.OleDb.xml",
-        "runtimes/win/lib/net7.0/System.Data.OleDb.dll",
-        "runtimes/win/lib/net7.0/System.Data.OleDb.xml",
-        "runtimes/win/lib/net8.0/System.Data.OleDb.dll",
-        "runtimes/win/lib/net8.0/System.Data.OleDb.xml",
-        "system.data.oledb.8.0.0.nupkg.sha512",
-        "system.data.oledb.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -4763,78 +4556,42 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Diagnostics.EventLog/8.0.0": {
-      "sha512": "fdYxcRjQqTTacKId/2IECojlDSFvp7LP5N78+0z/xH7v/Tuw5ZAxu23Y6PTCRinqyu2ePx+Gn1098NC6jM6d+A==",
+    "System.Drawing.Common/6.0.0": {
+      "sha512": "NfuoKUiP2nUWwKZN6twGqXioIe1zVD0RIj2t976A+czLHr2nY454RwwXs6JU9Htc6mwqL6Dn/nEL3dpVf2jOhg==",
       "type": "package",
-      "path": "system.diagnostics.eventlog/8.0.0",
+      "path": "system.drawing.common/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
-        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Diagnostics.EventLog.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Diagnostics.EventLog.targets",
-        "lib/net462/System.Diagnostics.EventLog.dll",
-        "lib/net462/System.Diagnostics.EventLog.xml",
-        "lib/net6.0/System.Diagnostics.EventLog.dll",
-        "lib/net6.0/System.Diagnostics.EventLog.xml",
-        "lib/net7.0/System.Diagnostics.EventLog.dll",
-        "lib/net7.0/System.Diagnostics.EventLog.xml",
-        "lib/net8.0/System.Diagnostics.EventLog.dll",
-        "lib/net8.0/System.Diagnostics.EventLog.xml",
-        "lib/netstandard2.0/System.Diagnostics.EventLog.dll",
-        "lib/netstandard2.0/System.Diagnostics.EventLog.xml",
-        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll",
-        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll",
-        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.xml",
-        "runtimes/win/lib/net7.0/System.Diagnostics.EventLog.Messages.dll",
-        "runtimes/win/lib/net7.0/System.Diagnostics.EventLog.dll",
-        "runtimes/win/lib/net7.0/System.Diagnostics.EventLog.xml",
-        "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll",
-        "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll",
-        "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.xml",
-        "system.diagnostics.eventlog.8.0.0.nupkg.sha512",
-        "system.diagnostics.eventlog.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.Diagnostics.PerformanceCounter/8.0.0": {
-      "sha512": "lX6DXxtJqVGWw7N/QmVoiCyVQ+Q/Xp+jVXPr3gLK1jJExSn1qmAjJQeb8gnOYeeBTG3E3PmG1nu92eYj/TEjpg==",
-      "type": "package",
-      "path": "system.diagnostics.performancecounter/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Diagnostics.PerformanceCounter.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Diagnostics.PerformanceCounter.targets",
-        "lib/net462/System.Diagnostics.PerformanceCounter.dll",
-        "lib/net462/System.Diagnostics.PerformanceCounter.xml",
-        "lib/net6.0/System.Diagnostics.PerformanceCounter.dll",
-        "lib/net6.0/System.Diagnostics.PerformanceCounter.xml",
-        "lib/net7.0/System.Diagnostics.PerformanceCounter.dll",
-        "lib/net7.0/System.Diagnostics.PerformanceCounter.xml",
-        "lib/net8.0/System.Diagnostics.PerformanceCounter.dll",
-        "lib/net8.0/System.Diagnostics.PerformanceCounter.xml",
-        "lib/netstandard2.0/System.Diagnostics.PerformanceCounter.dll",
-        "lib/netstandard2.0/System.Diagnostics.PerformanceCounter.xml",
-        "runtimes/win/lib/net6.0/System.Diagnostics.PerformanceCounter.dll",
-        "runtimes/win/lib/net6.0/System.Diagnostics.PerformanceCounter.xml",
-        "runtimes/win/lib/net7.0/System.Diagnostics.PerformanceCounter.dll",
-        "runtimes/win/lib/net7.0/System.Diagnostics.PerformanceCounter.xml",
-        "runtimes/win/lib/net8.0/System.Diagnostics.PerformanceCounter.dll",
-        "runtimes/win/lib/net8.0/System.Diagnostics.PerformanceCounter.xml",
-        "system.diagnostics.performancecounter.8.0.0.nupkg.sha512",
-        "system.diagnostics.performancecounter.nuspec",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Drawing.Common.dll",
+        "lib/net461/System.Drawing.Common.xml",
+        "lib/net6.0/System.Drawing.Common.dll",
+        "lib/net6.0/System.Drawing.Common.xml",
+        "lib/netcoreapp3.1/System.Drawing.Common.dll",
+        "lib/netcoreapp3.1/System.Drawing.Common.xml",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "runtimes/unix/lib/net6.0/System.Drawing.Common.dll",
+        "runtimes/unix/lib/net6.0/System.Drawing.Common.xml",
+        "runtimes/unix/lib/netcoreapp3.1/System.Drawing.Common.dll",
+        "runtimes/unix/lib/netcoreapp3.1/System.Drawing.Common.xml",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Drawing.Common.xml",
+        "system.drawing.common.6.0.0.nupkg.sha512",
+        "system.drawing.common.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -5187,6 +4944,35 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Security.AccessControl/6.0.0": {
+      "sha512": "AUADIc0LIEQe7MzC+I0cl0rAT8RrTAKFHl53yHjEUzNVIaUlhFY11vc2ebiVJzVBuOzun6F7FBA+8KAbGTTedQ==",
+      "type": "package",
+      "path": "system.security.accesscontrol/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Security.AccessControl.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Security.AccessControl.dll",
+        "lib/net461/System.Security.AccessControl.xml",
+        "lib/net6.0/System.Security.AccessControl.dll",
+        "lib/net6.0/System.Security.AccessControl.xml",
+        "lib/netstandard2.0/System.Security.AccessControl.dll",
+        "lib/netstandard2.0/System.Security.AccessControl.xml",
+        "runtimes/win/lib/net461/System.Security.AccessControl.dll",
+        "runtimes/win/lib/net461/System.Security.AccessControl.xml",
+        "runtimes/win/lib/net6.0/System.Security.AccessControl.dll",
+        "runtimes/win/lib/net6.0/System.Security.AccessControl.xml",
+        "runtimes/win/lib/netstandard2.0/System.Security.AccessControl.dll",
+        "runtimes/win/lib/netstandard2.0/System.Security.AccessControl.xml",
+        "system.security.accesscontrol.6.0.0.nupkg.sha512",
+        "system.security.accesscontrol.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Security.Cryptography.Cng/5.0.0": {
       "sha512": "jIMXsKn94T9JY7PvPq/tMfqa6GAaHpElRDpmG+SuL+D3+sTw2M8VhnibKnN8Tq+4JqbPJ/f+BwtLeDMEnzAvRg==",
       "type": "package",
@@ -5268,39 +5054,67 @@
         "version.txt"
       ]
     },
-    "System.Security.Cryptography.ProtectedData/8.0.0": {
-      "sha512": "+TUFINV2q2ifyXauQXRwy4CiBhqvDEDZeVJU7qfxya4aRYOKzVBpN+4acx25VcPB9ywUN6C0n8drWl110PhZEg==",
+    "System.Security.Cryptography.ProtectedData/6.0.0": {
+      "sha512": "rp1gMNEZpvx9vP0JW0oHLxlf8oSiQgtno77Y4PLUBjSiDYoD77Y8uXHr1Ea5XG4/pIKhqAdxZ8v8OTUtqo9PeQ==",
       "type": "package",
-      "path": "system.security.cryptography.protecteddata/8.0.0",
+      "path": "system.security.cryptography.protecteddata/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
-        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Security.Cryptography.ProtectedData.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
         "buildTransitive/netcoreapp2.0/System.Security.Cryptography.ProtectedData.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
-        "lib/net462/System.Security.Cryptography.ProtectedData.dll",
-        "lib/net462/System.Security.Cryptography.ProtectedData.xml",
+        "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net461/System.Security.Cryptography.ProtectedData.xml",
         "lib/net6.0/System.Security.Cryptography.ProtectedData.dll",
         "lib/net6.0/System.Security.Cryptography.ProtectedData.xml",
-        "lib/net7.0/System.Security.Cryptography.ProtectedData.dll",
-        "lib/net7.0/System.Security.Cryptography.ProtectedData.xml",
-        "lib/net8.0/System.Security.Cryptography.ProtectedData.dll",
-        "lib/net8.0/System.Security.Cryptography.ProtectedData.xml",
         "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
         "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
+        "runtimes/win/lib/net461/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/net461/System.Security.Cryptography.ProtectedData.xml",
+        "runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.xml",
+        "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
+        "system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
         "system.security.cryptography.protecteddata.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Security.Permissions/6.0.0": {
+      "sha512": "T/uuc7AklkDoxmcJ7LGkyX1CcSviZuLCa4jg3PekfJ7SU0niF0IVTXwUiNVP9DSpzou2PpxJ+eNY2IfDM90ZCg==",
+      "type": "package",
+      "path": "system.security.permissions/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Security.Permissions.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Security.Permissions.dll",
+        "lib/net461/System.Security.Permissions.xml",
+        "lib/net5.0/System.Security.Permissions.dll",
+        "lib/net5.0/System.Security.Permissions.xml",
+        "lib/net6.0/System.Security.Permissions.dll",
+        "lib/net6.0/System.Security.Permissions.xml",
+        "lib/netcoreapp3.1/System.Security.Permissions.dll",
+        "lib/netcoreapp3.1/System.Security.Permissions.xml",
+        "lib/netstandard2.0/System.Security.Permissions.dll",
+        "lib/netstandard2.0/System.Security.Permissions.xml",
+        "runtimes/win/lib/net461/System.Security.Permissions.dll",
+        "runtimes/win/lib/net461/System.Security.Permissions.xml",
+        "system.security.permissions.6.0.0.nupkg.sha512",
+        "system.security.permissions.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -5427,44 +5241,41 @@
         "system.text.encoding.nuspec"
       ]
     },
-    "System.Text.Encoding.CodePages/8.0.0": {
-      "sha512": "OZIsVplFGaVY90G2SbpgU7EnCoOO5pw1t4ic21dBF3/1omrJFpAGoNAVpPyMVOC90/hvgkGG3VFqR13YgZMQfg==",
+    "System.Text.Encoding.CodePages/6.0.0": {
+      "sha512": "ZFCILZuOvtKPauZ/j/swhvw68ZRi9ATCfvGbk1QfydmcXBkIWecWKn/250UH7rahZ5OoDBaiAudJtPvLwzw85A==",
       "type": "package",
-      "path": "system.text.encoding.codepages/8.0.0",
+      "path": "system.text.encoding.codepages/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
-        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Text.Encoding.CodePages.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
         "buildTransitive/netcoreapp2.0/System.Text.Encoding.CodePages.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
-        "lib/net462/System.Text.Encoding.CodePages.dll",
-        "lib/net462/System.Text.Encoding.CodePages.xml",
+        "lib/net461/System.Text.Encoding.CodePages.dll",
+        "lib/net461/System.Text.Encoding.CodePages.xml",
         "lib/net6.0/System.Text.Encoding.CodePages.dll",
         "lib/net6.0/System.Text.Encoding.CodePages.xml",
-        "lib/net7.0/System.Text.Encoding.CodePages.dll",
-        "lib/net7.0/System.Text.Encoding.CodePages.xml",
-        "lib/net8.0/System.Text.Encoding.CodePages.dll",
-        "lib/net8.0/System.Text.Encoding.CodePages.xml",
+        "lib/netcoreapp3.1/System.Text.Encoding.CodePages.dll",
+        "lib/netcoreapp3.1/System.Text.Encoding.CodePages.xml",
         "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
         "lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
+        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.xml",
         "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll",
         "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.xml",
-        "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.xml",
-        "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.xml",
-        "system.text.encoding.codepages.8.0.0.nupkg.sha512",
+        "runtimes/win/lib/netcoreapp3.1/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
+        "system.text.encoding.codepages.6.0.0.nupkg.sha512",
         "system.text.encoding.codepages.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -5637,19 +5448,39 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "System.Windows.Extensions/6.0.0": {
+      "sha512": "IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
+      "type": "package",
+      "path": "system.windows.extensions/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net6.0/System.Windows.Extensions.dll",
+        "lib/net6.0/System.Windows.Extensions.xml",
+        "lib/netcoreapp3.1/System.Windows.Extensions.dll",
+        "lib/netcoreapp3.1/System.Windows.Extensions.xml",
+        "runtimes/win/lib/net6.0/System.Windows.Extensions.dll",
+        "runtimes/win/lib/net6.0/System.Windows.Extensions.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Windows.Extensions.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Windows.Extensions.xml",
+        "system.windows.extensions.6.0.0.nupkg.sha512",
+        "system.windows.extensions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "EntityFrameworkCore.Jet >= 8.0.0",
-      "EntityFrameworkCore.Jet.Data >= 8.0.0",
-      "EntityFrameworkCore.Jet.Odbc >= 8.0.0",
-      "EntityFrameworkCore.Jet.OleDb >= 8.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.1",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.1",
       "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.1",
+      "Microsoft.OpenApi >= 1.6.23",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -5695,22 +5526,6 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
-          "EntityFrameworkCore.Jet": {
-            "target": "Package",
-            "version": "[8.0.0, )"
-          },
-          "EntityFrameworkCore.Jet.Data": {
-            "target": "Package",
-            "version": "[8.0.0, )"
-          },
-          "EntityFrameworkCore.Jet.Odbc": {
-            "target": "Package",
-            "version": "[8.0.0, )"
-          },
-          "EntityFrameworkCore.Jet.OleDb": {
-            "target": "Package",
-            "version": "[8.0.0, )"
-          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[9.0.1, )"
@@ -5734,6 +5549,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[9.0.1, )"
+          },
+          "Microsoft.OpenApi": {
+            "target": "Package",
+            "version": "[1.6.23, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -5762,26 +5581,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: EntityFrameworkCore.Jet 8.0.0 requires Microsoft.EntityFrameworkCore (>= 8.0.6 && <= 8.0.999) but version Microsoft.EntityFrameworkCore 9.0.1 was resolved.",
-      "libraryId": "Microsoft.EntityFrameworkCore",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1107",
-      "level": "Error",
-      "message": "Version conflict detected for Microsoft.EntityFrameworkCore.Relational. Install/reference Microsoft.EntityFrameworkCore.Relational 9.0.1 directly to project weathertest to resolve this issue. \r\n weathertest -> Microsoft.EntityFrameworkCore.Sqlite 9.0.1 -> Microsoft.EntityFrameworkCore.Sqlite.Core 9.0.1 -> Microsoft.EntityFrameworkCore.Relational (>= 9.0.1) \r\n weathertest -> EntityFrameworkCore.Jet 8.0.0 -> Microsoft.EntityFrameworkCore.Relational (>= 8.0.6 && <= 8.0.999).",
-      "libraryId": "Microsoft.EntityFrameworkCore.Relational",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }
