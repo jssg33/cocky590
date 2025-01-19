@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\home\\cocky590\\weathertest.csproj": {}
+    "C:\\home\\cocky590\\cocky590.csproj": {}
   },
   "projects": {
-    "C:\\home\\cocky590\\weathertest.csproj": {
+    "C:\\home\\cocky590\\cocky590.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\home\\cocky590\\weathertest.csproj",
-        "projectName": "weathertest",
-        "projectPath": "C:\\home\\cocky590\\weathertest.csproj",
+        "projectUniqueName": "C:\\home\\cocky590\\cocky590.csproj",
+        "projectName": "cocky590",
+        "projectPath": "C:\\home\\cocky590\\cocky590.csproj",
         "packagesPath": "C:\\Users\\Administrator.CAPITOL1\\.nuget\\packages\\",
         "outputPath": "C:\\home\\cocky590\\obj\\",
         "projectStyle": "PackageReference",
@@ -43,6 +43,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.1, )"

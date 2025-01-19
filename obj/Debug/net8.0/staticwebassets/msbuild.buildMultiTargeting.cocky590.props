@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\cocky590.props" />
+</Project>

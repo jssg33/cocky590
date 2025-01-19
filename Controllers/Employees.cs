@@ -1,60 +1,49 @@
 ﻿using System;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.OpenApi;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using EntityFrameworkCore.Jet;
 using Microsoft.AspNetCore.Http;
 using System.Net.Mail;
+using Enterprise.Models;
 namespace somecontrollers.Controllers;
 
-public static class StudentEndpoints
+public static class EmployeeEndpoints
 {
     
-    public static async void MapStudentEndpoints(this IEndpointRouteBuilder routes)
+    public static async void MapEmployeeEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = routes.MapGroup("/api/Student").WithTags(nameof(Student));
+        var group = routes.MapGroup("/api/Employee").WithTags(nameof(Employee));
 
         //[HttpGet]
         group.MapGet("/", () =>
         {
-            using (var context = new ModelContext())
+            using (var context = new CeContext())
             {
-                return context.Students.ToList();
+                return context.Employees.ToList();
             }
 
         })
-        .WithName("GetAllStudents")
+        .WithName("GetAllEmployees")
         .WithOpenApi();
 
         //[HttpGet]
         group.MapGet("/{id}", (int id) =>
         {
-            using (var context = new ModelContext())
+            using (var context = new CeContext())
             {
-                return context.Students.Where(m => m.Id == id).ToList();
+                return context.Employees.Where(m => m.Id == id).ToList();
             }
         })
-        .WithName("GetStudentById")
+        .WithName("GetEmployeeById")
         .WithOpenApi();
 
         //[HttpPut]
-        group.MapPut("/{id}", (int id, Student input) =>
+        group.MapPut("/{id}", (int id, Employee input) =>
         {
-            using (var context = new ModelContext())
+            using (var context = new CeContext())
             {
-                Student[] somestudent = context.Students.Where(m => m.Id == id).ToArray();
-                context.Students.Attach(somestudent[0]);
-                //somestudents[0] = input;
-                //Student result = new Student();
-                //somestudent[0].Id = input.Id;
-                somestudent[0].LastName = input.LastName;
-                somestudent[0].FirstName = input.FirstName;
-                somestudent[0].EMailAddress = input.EMailAddress;
-                //context.Entry(somestudent[0]).State = EntityState.Modified;
-                //result.LastName = "Smith";
-                //result.FirstName = "Kyle";
+                Employee[] someEmployee = context.Employees.Where(m => m.Id == id).ToArray();
+                context.Employees.Attach(someEmployee[0]);
+                someEmployee[0].Employeeid = input.Employeeid;
                 context.SaveChanges();
                 //await context.SaveChangesAsync();
                 return TypedResults.Accepted("Updated ID:" + input.Id);
@@ -62,38 +51,38 @@ public static class StudentEndpoints
 
 
         })
-        .WithName("UpdateStudent")
+        .WithName("UpdateEmployee")
         .WithOpenApi();
 
-        group.MapPost("/", async (Student input) =>
+        group.MapPost("/", async (Employee input) =>
         {
-            using (var context = new ModelContext())
+            using (var context = new CeContext())
             {
                 Random rnd = new Random();
                 int dice = rnd.Next(1000, 10000000);
                 input.Id = dice;
-                context.Students.Add(input);
+                context.Employees.Add(input);
                 await context.SaveChangesAsync();                     
                 return TypedResults.Created("Created ID:" + input.Id);
             }
 
         })
-        .WithName("CreateStudent")
+        .WithName("CreateEmployee")
         .WithOpenApi();
 
         group.MapDelete("/{id}", (int id) =>
         {
-            using (var context = new ModelContext())
+            using (var context = new CeContext())
             {
-                //context.Students.Add(std);
-                Student[] somestudents = context.Students.Where(m => m.Id == id).ToArray();
-                context.Students.Attach(somestudents[0]);
-                context.Students.Remove(somestudents[0]);
+                //context.Employees.Add(std);
+                Employee[] someEmployees = context.Employees.Where(m => m.Id == id).ToArray();
+                context.Employees.Attach(someEmployees[0]);
+                context.Employees.Remove(someEmployees[0]);
                 context.SaveChanges();
             }
 
         })
-        .WithName("DeleteStudent")
+        .WithName("DeleteEmployee")
         .WithOpenApi();
     }
 }

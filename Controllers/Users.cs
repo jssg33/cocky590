@@ -1,12 +1,9 @@
 ﻿using System;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.OpenApi;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using EntityFrameworkCore.Jet;
 using Microsoft.AspNetCore.Http;
 using System.Net.Mail;
+using Enterprise.Models;
 namespace somecontrollers.Controllers;
 
 public static class UserEndpoints
@@ -36,19 +33,19 @@ public static class UserEndpoints
                 return context.Users.Where(m => m.Id == id).ToList();
             }
         })
-        .WithName("GetUsersById")
+        .WithName("GetUserById")
         .WithOpenApi();
 
         //[HttpPut]
-        group.MapPut("/{id}", (int id, Users input) =>
+        group.MapPut("/{id}", (int id, User input) =>
         {
             using (var context = new CeContext())
             {
                 User[] someUser = context.Users.Where(m => m.Id == id).ToArray();
                 context.Users.Attach(someUser[0]);
-                someUser[0].LastName = input.LastName;
-                someUser[0].FirstName = input.FirstName;
-                someUser[0].EMailAddress = input.EMailAddress;
+                someUser[0].Lastname = input.Lastname;
+                someUser[0].Firstname = input.Firstname;
+                someUser[0].Email = input.Email;
                 context.SaveChanges();
                 return TypedResults.Accepted("Updated ID:" + input.Id);
             }
@@ -60,7 +57,7 @@ public static class UserEndpoints
 
         group.MapPost("/", async (User input) =>
         {
-            using (var context = new ModelContext())
+            using (var context = new CeContext())
             {
                 Random rnd = new Random();
                 int dice = rnd.Next(1000, 10000000);
@@ -76,7 +73,7 @@ public static class UserEndpoints
 
         group.MapDelete("/{id}", (int id) =>
         {
-            using (var context = new ModelContext())
+            using (var context = new CeContext())
             {
                 //context.Users.Add(std);
                 User[] someUsers = context.Users.Where(m => m.Id == id).ToArray();

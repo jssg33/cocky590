@@ -1,60 +1,49 @@
 ﻿using System;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.OpenApi;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using EntityFrameworkCore.Jet;
 using Microsoft.AspNetCore.Http;
 using System.Net.Mail;
+using Enterprise.Models;
 namespace somecontrollers.Controllers;
 
-public static class StudentEndpoints
+public static class CertificationEndpoints
 {
     
-    public static async void MapStudentEndpoints(this IEndpointRouteBuilder routes)
+    public static async void MapCertificationEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = routes.MapGroup("/api/Student").WithTags(nameof(Student));
+        var group = routes.MapGroup("/api/Certification").WithTags(nameof(Certification));
 
         //[HttpGet]
         group.MapGet("/", () =>
         {
-            using (var context = new ModelContext())
+            using (var context = new CeContext())
             {
-                return context.Students.ToList();
+                return context.Certifications.ToList();
             }
 
         })
-        .WithName("GetAllStudents")
+        .WithName("GetAllCertifications")
         .WithOpenApi();
 
         //[HttpGet]
         group.MapGet("/{id}", (int id) =>
         {
-            using (var context = new ModelContext())
+            using (var context = new CeContext())
             {
-                return context.Students.Where(m => m.Id == id).ToList();
+                return context.Certifications.Where(m => m.Id == id).ToList();
             }
         })
-        .WithName("GetStudentById")
+        .WithName("GetCertificationById")
         .WithOpenApi();
 
         //[HttpPut]
-        group.MapPut("/{id}", (int id, Student input) =>
+        group.MapPut("/{id}", (int id, Certification input) =>
         {
-            using (var context = new ModelContext())
+            using (var context = new CeContext())
             {
-                Student[] somestudent = context.Students.Where(m => m.Id == id).ToArray();
-                context.Students.Attach(somestudent[0]);
-                //somestudents[0] = input;
-                //Student result = new Student();
-                //somestudent[0].Id = input.Id;
-                somestudent[0].LastName = input.LastName;
-                somestudent[0].FirstName = input.FirstName;
-                somestudent[0].EMailAddress = input.EMailAddress;
-                //context.Entry(somestudent[0]).State = EntityState.Modified;
-                //result.LastName = "Smith";
-                //result.FirstName = "Kyle";
+                Certification[] someCertification = context.Certifications.Where(m => m.Id == id).ToArray();
+                context.Certifications.Attach(someCertification[0]);
+                someCertification[0].Certname = input.Certname;
                 context.SaveChanges();
                 //await context.SaveChangesAsync();
                 return TypedResults.Accepted("Updated ID:" + input.Id);
@@ -62,38 +51,38 @@ public static class StudentEndpoints
 
 
         })
-        .WithName("UpdateStudent")
+        .WithName("UpdateCertification")
         .WithOpenApi();
 
-        group.MapPost("/", async (Student input) =>
+        group.MapPost("/", async (Certification input) =>
         {
-            using (var context = new ModelContext())
+            using (var context = new CeContext())
             {
                 Random rnd = new Random();
                 int dice = rnd.Next(1000, 10000000);
                 input.Id = dice;
-                context.Students.Add(input);
+                context.Certifications.Add(input);
                 await context.SaveChangesAsync();                     
                 return TypedResults.Created("Created ID:" + input.Id);
             }
 
         })
-        .WithName("CreateStudent")
+        .WithName("CreateCertification")
         .WithOpenApi();
 
         group.MapDelete("/{id}", (int id) =>
         {
-            using (var context = new ModelContext())
+            using (var context = new CeContext())
             {
-                //context.Students.Add(std);
-                Student[] somestudents = context.Students.Where(m => m.Id == id).ToArray();
-                context.Students.Attach(somestudents[0]);
-                context.Students.Remove(somestudents[0]);
+                //context.Certifications.Add(std);
+                Certification[] someCertifications = context.Certifications.Where(m => m.Id == id).ToArray();
+                context.Certifications.Attach(someCertifications[0]);
+                context.Certifications.Remove(someCertifications[0]);
                 context.SaveChanges();
             }
 
         })
-        .WithName("DeleteStudent")
+        .WithName("DeleteCertification")
         .WithOpenApi();
     }
 }
