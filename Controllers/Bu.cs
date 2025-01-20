@@ -73,7 +73,7 @@ public static class BuEndpoints
         .WithName("CreateBu")
         .WithOpenApi();
 
-        group.MapDelete("/{id}", (int id) =>
+        group.MapDelete("/{id}", async (int id) =>
         {
             using (var context = new CeContext())
             {
