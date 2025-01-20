@@ -1,3 +1,5 @@
+using somecontrollers.Controllers;
+using Enterprise.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -17,7 +19,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
-
+app.MapEmployeeEndpoints();
+app.MapBuEndpoints();
+app.MapCertificationEndpoints();
+app.MapUserEndpoints();
 app.MapControllers();
 
 app.Run();
